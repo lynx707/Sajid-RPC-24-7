@@ -24,9 +24,9 @@ client.on('ready', async () => {
 
   const r = new Discord.RichPresence()
     .setApplicationId('1079010612769722508')
-    .setType('PLAYING')
+    .setType('LISTENING')
     .setURL('https://www.youtube.com/patkhet') //Must be a youtube video link 
-    .setState('Discord Community')
+    .setState('‌Discord Community‌')
     .setName('Patkhet')
     .setDetails(`THE NAME IT SHOWS YOUR STREAMING [${formatTime()}]`)
     .setStartTimestamp(Date.now())
@@ -44,7 +44,7 @@ client.on('ready', async () => {
   setInterval(() => {
     const newTime = formatTime();
     if (newTime !== prevTime) {
-      const newDetails = `Patkhet Server [${newTime}]`;
+      const newDetails = `Patkhet Server`;
       r.setDetails(newDetails);
       client.user.setActivity(r);
       prevTime = newTime;
